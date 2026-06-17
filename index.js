@@ -2,8 +2,7 @@ const express = require("express");
 const path = require("path");
 const {
     registrarVisita,
-    obtenerVisitas,
-    resetearVisitas
+    obtenerVisitas
 } = require("./contador");
 
 const app = express();

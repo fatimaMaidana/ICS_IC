@@ -4,3 +4,6 @@ node_modules
 *.md
 .DS_Store
 .github
+contador.test.js
+eslint.config.js
+coverage
