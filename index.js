@@ -1,15 +1,18 @@
 const express = require("express");
 const path = require("path");
+const {
+    registrarVisita,
+    obtenerVisitas,
+    resetearVisitas
+} = require("./contador");
 
 const app = express();
 const PORT = 3000;
 
-let visitas = 0;
-
 app.use(express.static("public"));
 
 app.get("/", (req, res) => {
-    visitas++;
+    registrarVisita();
 
     res.sendFile(
         path.join(__dirname, "public", "index.html")
@@ -18,7 +21,7 @@ app.get("/", (req, res) => {
 
 app.get("/visitas", (req, res) => {
     res.json({
-        visitas: visitas
+        visitas: obtenerVisitas()
     });
 });
 
