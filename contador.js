@@ -1,5 +1,5 @@
 let visitas = 0;
-let x= 5;
+
 
 function registrarVisita() {
     visitas++;
@@ -11,7 +11,7 @@ function obtenerVisitas() {
 }
 
 function resetearVisitas() {
-    visitas = 1;
+    visitas = 0;
     return visitas;
 }
 
