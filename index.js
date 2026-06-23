@@ -6,7 +6,7 @@ const {
 } = require("./contador");
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 app.get("/", (req, res) => {
     registrarVisita();
@@ -26,6 +26,6 @@ app.use(express.static("public"));
 
 app.listen(PORT, () => {
     console.log(
-        `Servidor ejecutándose en http://localhost:${PORT}`
+        `Servidor ejecutándose en puerto ${PORT}`
     );
 });
