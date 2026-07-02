@@ -11,7 +11,7 @@ function obtenerVisitas() {
 }
 
 function resetearVisitas() {
-    visitas = 0;
+    visitas = 1;
     return visitas;
 }
 
